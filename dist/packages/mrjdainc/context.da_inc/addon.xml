@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="" name="Elementum Context Helper" version="0.0.1" provider-name="elgatito">
+<addon id="context.da_inc" name="Da inc Context Helper" version="0.0.3" provider-name="Two Face And Mr j">
     <requires>
         <import addon="xbmc.python" version="2.23.0"/>
         <import addon="script.module.requests"/>
@@ -10,7 +10,11 @@
           <label>My submenu</label>
           <item library="context_play.py">
             <label>32000</label>
-            <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode)</visible>
+            <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)</visible>
+          </item>
+          <item library="context_download.py">
+            <label>32012</label>
+            <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)</visible>
           </item>
           <!-- <item library="context_menu.py">
             <label>32001</label>
@@ -19,13 +23,13 @@
     </menu>
     </extension>
     <extension point="kodi.addon.metadata">
-        <summary lang="en">Elementum Context Menu</summary>
-        <description lang="en">Context Menu for Elementum.</description>
+        <summary lang="en">Da inc Context Menu</summary>
+        <description lang="en">Context Menu for Da inc.</description>
         <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.
         </disclaimer>
         <license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
-        <website>https://dainc.surge.sh</website>
-        <source>https://github.com/mrjdainc/</source>
+        <website>https://Da inc.surge.sh</website>
+        <source>https://github.com/Two Face And Mr j/context.da_inc</source>
         <forum></forum>
     </extension>
 </addon>
